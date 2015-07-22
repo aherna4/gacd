@@ -15,14 +15,13 @@ download.file(file_url, temp, method = "auto")
 unzip(temp)
 unlink(temp)
 
-setwd("C:/Users/alexherseg/Documents/School/Data_Science/3_gacd/")
 # First, we read in the files that contain the activity labels and the 
 # feature descriptions.
 activity_labels <- read.table("./UCI HAR Dataset/activity_labels.txt") # 6 X 2, col 2
 features <- read.table("./UCI HAR Dataset/features.txt") # 561 X 2, col 2
 features <- as.character(features[, 2])
-features <- gsub('mean', 'Mean', features)
-features <- gsub('std', 'Std', features)
+features <- gsub('mean', 'Mean', features) # cleans up some of the names
+features <- gsub('std', 'Std', features) # cleans up some of the names
 features <- gsub('[-()]', '', features) # cleans up some of the names
 features <- make.names(features, unique = TRUE) # need this because ...
 # there are repeated column names and that gives an error when I try to use dplyr later.
@@ -50,14 +49,15 @@ test <- cbind(subject_test, activity_test, test)
 # Finally, we merge the training and testing data. ------------------
 complete <- rbind(train, test)
 
-# Now, we take the Activity, Subject, mean and std columns. ---------
+# Now, as instructed, we take the Activity, Subject, mean and std columns.
 library(dplyr)
-relevant_data <- complete %>% select(Activity, Subject, contains("mean"), contains("std"))
+relevant_data <- complete %>% select(Subject, Activity, contains("mean"), contains("std"))
 
 # Using this data, we create the tidy data set with the average of each
 # variable for each activity and each subject.
 library(reshape2)
-long_form <- melt(relevant_data, id = c("Activity", "Subject")) # 885714 X 4
-tidy <- dcast(long_form, Activity + Subject ~ variable, mean) # 180 X 88
+long_form <- melt(relevant_data, id = c("Subject", "Activity")) # 885714 X 4
+tidy_data <- dcast(long_form, Subject + Activity ~ variable, mean) # 180 X 88
 
-write.table(tidy, "tidy.txt", row.names = FALSE)
+# And we create the tidy_data.txt file
+write.table(tidy_data, "tidy_data.txt", row.names = FALSE, quote = FALSE)
