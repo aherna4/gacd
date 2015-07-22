@@ -6,94 +6,94 @@ The original UCI HAR data contains 561 measurements collected from smart phone a
 ## The variables:
 Our tidy data contains 180 observations on 88 variables. Each observation contains the mean of each variable for each subject and activity. So, for example, the first observation has Subject 1's mean for each measurement for the WALKING activity; the second observation has Subject 1's mean for each measurement for the WALKING UPSTAIRS activity, and so on. The variables of the tidy dataset are as follows:
 
-Subject 
-Activity 
-tBodyAccMeanX 
-tBodyAccMeanY 
-tBodyAccMeanZ 
-tGravityAccMeanX 
-tGravityAccMeanY 
-tGravityAccMeanZ 
-tBodyAccJerkMeanX 
-tBodyAccJerkMeanY 
-tBodyAccJerkMeanZ 
-tBodyGyroMeanX 
-tBodyGyroMeanY 
-tBodyGyroMeanZ 
-tBodyGyroJerkMeanX 
-tBodyGyroJerkMeanY 
-tBodyGyroJerkMeanZ 
-tBodyAccMagMean 
-tGravityAccMagMean 
-tBodyAccJerkMagMean 
-tBodyGyroMagMean 
-tBodyGyroJerkMagMean 
-fBodyAccMeanX 
-fBodyAccMeanY 
-fBodyAccMeanZ 
-fBodyAccMeanFreqX 
-fBodyAccMeanFreqY 
-fBodyAccMeanFreqZ 
-fBodyAccJerkMeanX 
-fBodyAccJerkMeanY 
-fBodyAccJerkMeanZ 
-fBodyAccJerkMeanFreqX 
-fBodyAccJerkMeanFreqY 
-fBodyAccJerkMeanFreqZ 
-fBodyGyroMeanX 
-fBodyGyroMeanY 
-fBodyGyroMeanZ 
-fBodyGyroMeanFreqX 
-fBodyGyroMeanFreqY 
-fBodyGyroMeanFreqZ 
-fBodyAccMagMean 
-fBodyAccMagMeanFreq 
-fBodyBodyAccJerkMagMean 
-fBodyBodyAccJerkMagMeanFreq 
-fBodyBodyGyroMagMean 
-fBodyBodyGyroMagMeanFreq 
-fBodyBodyGyroJerkMagMean 
-fBodyBodyGyroJerkMagMeanFreq 
-angletBodyAccMean.gravity 
-angletBodyAccJerkMean.gravityMean 
-angletBodyGyroMean.gravityMean 
-angletBodyGyroJerkMean.gravityMean 
-angleX.gravityMean 
-angleY.gravityMean 
-angleZ.gravityMean 
-tBodyAccStdX 
-tBodyAccStdY 
-tBodyAccStdZ 
-tGravityAccStdX 
-tGravityAccStdY 
-tGravityAccStdZ 
-tBodyAccJerkStdX 
-tBodyAccJerkStdY 
-tBodyAccJerkStdZ 
-tBodyGyroStdX 
-tBodyGyroStdY 
-tBodyGyroStdZ 
-tBodyGyroJerkStdX 
-tBodyGyroJerkStdY 
-tBodyGyroJerkStdZ 
-tBodyAccMagStd 
-tGravityAccMagStd 
-tBodyAccJerkMagStd 
-tBodyGyroMagStd 
-tBodyGyroJerkMagStd 
-fBodyAccStdX 
-fBodyAccStdY 
-fBodyAccStdZ 
-fBodyAccJerkStdX 
-fBodyAccJerkStdY 
-fBodyAccJerkStdZ 
-fBodyGyroStdX 
-fBodyGyroStdY 
-fBodyGyroStdZ 
-fBodyAccMagStd 
-fBodyBodyAccJerkMagStd 
-fBodyBodyGyroMagStd 
-fBodyBodyGyroJerkMagStd 
+	Subject 
+	Activity 
+	tBodyAccMeanX
+	tBodyAccMeanY 
+	tBodyAccMeanZ 
+	tGravityAccMeanX 
+	tGravityAccMeanY 
+	tGravityAccMeanZ 
+	tBodyAccJerkMeanX 
+	tBodyAccJerkMeanY 
+	tBodyAccJerkMeanZ 
+	tBodyGyroMeanX 
+	tBodyGyroMeanY 
+	tBodyGyroMeanZ 
+	tBodyGyroJerkMeanX 
+	tBodyGyroJerkMeanY 
+	tBodyGyroJerkMeanZ 
+	tBodyAccMagMean 
+	tGravityAccMagMean 
+	tBodyAccJerkMagMean 
+	tBodyGyroMagMean 
+	tBodyGyroJerkMagMean 
+	fBodyAccMeanX 
+	fBodyAccMeanY 
+	fBodyAccMeanZ 
+	fBodyAccMeanFreqX 
+	fBodyAccMeanFreqY 
+	fBodyAccMeanFreqZ 
+	fBodyAccJerkMeanX 
+	fBodyAccJerkMeanY 
+	fBodyAccJerkMeanZ 
+	fBodyAccJerkMeanFreqX 
+	fBodyAccJerkMeanFreqY 
+	fBodyAccJerkMeanFreqZ 
+	fBodyGyroMeanX 
+	fBodyGyroMeanY 
+	fBodyGyroMeanZ 
+	fBodyGyroMeanFreqX 
+	fBodyGyroMeanFreqY 
+	fBodyGyroMeanFreqZ 
+	fBodyAccMagMean 
+	fBodyAccMagMeanFreq 
+	fBodyBodyAccJerkMagMean 
+	fBodyBodyAccJerkMagMeanFreq 
+	fBodyBodyGyroMagMean 
+	fBodyBodyGyroMagMeanFreq 
+	fBodyBodyGyroJerkMagMean 
+	fBodyBodyGyroJerkMagMeanFreq 
+	angletBodyAccMean.gravity 
+	angletBodyAccJerkMean.gravityMean 
+	angletBodyGyroMean.gravityMean 
+	angletBodyGyroJerkMean.gravityMean 
+	angleX.gravityMean 
+	angleY.gravityMean 
+	angleZ.gravityMean 
+	tBodyAccStdX 
+	tBodyAccStdY 
+	tBodyAccStdZ 
+	tGravityAccStdX 
+	tGravityAccStdY 
+	tGravityAccStdZ 
+	tBodyAccJerkStdX 
+	tBodyAccJerkStdY 
+	tBodyAccJerkStdZ 
+	tBodyGyroStdX 
+	tBodyGyroStdY 
+	tBodyGyroStdZ 
+	tBodyGyroJerkStdX 
+	tBodyGyroJerkStdY 
+	tBodyGyroJerkStdZ 
+	tBodyAccMagStd 
+	tGravityAccMagStd 
+	tBodyAccJerkMagStd 
+	tBodyGyroMagStd 
+	tBodyGyroJerkMagStd 
+	fBodyAccStdX 
+	fBodyAccStdY 
+	fBodyAccStdZ 
+	fBodyAccJerkStdX 
+	fBodyAccJerkStdY 
+	fBodyAccJerkStdZ 
+	fBodyGyroStdX 
+	fBodyGyroStdY 
+	fBodyGyroStdZ 
+	fBodyAccMagStd 
+	fBodyBodyAccJerkMagStd 
+	fBodyBodyGyroMagStd 
+	fBodyBodyGyroJerkMagStd 
 
 ## Transformations/work done to clean up the data.
 First, the names of the variables were cleaned up. The original names made use of a lot of underscores and parenthesis, so we removed to make the names more compact and easier to read. We also recoded the Activity values (which were numeric) with the actual activity names (i.e. we replaced values 1-6 with WALKING, WALKING_UPSTAIRS, etc).
